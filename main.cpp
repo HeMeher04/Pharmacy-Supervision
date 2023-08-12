@@ -1,5 +1,3 @@
-
-
 #include<iostream>
 #include<cstdio>
 #include<fstream>
@@ -28,12 +26,12 @@ public:
         {
             cout << "Database Connected" << endl;
             cout << "Press any key to continue..." << endl;
-            // getch();
             system("cls");
         }
         else
             cout << "Failed To Connect!" << mysql_errno(conn) << endl;
         conn = mysql_real_connect(conn, "192.168.108.50", "admin", "admin", "pharmacy_c++_db", 0, NULL, 0);
+        //2-ipv4,3-admin name,4-password , 5-database name
         if (conn)
         {
             cout << "Database Connected To MySql" << conn << endl;
